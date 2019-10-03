@@ -47,7 +47,5 @@ function checkAnswer() {
     $("#currentScore").html("Current Score: " + correctCount + " out of " + quizDataJson.length);
 
     $('#feedbackModal').modal('show');
-    $('#feedbackModal').on('hidden.bs.modal', function () {
-        generateQuestion(i);
-    });
+    generateQuestion(i);
 }  
