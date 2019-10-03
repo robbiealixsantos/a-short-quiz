@@ -1,1 +1,1 @@
-# a-short-quiz
+# a short quiz
