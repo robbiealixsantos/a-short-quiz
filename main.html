@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Short Quiz</title>
+    <meta name="description" content="A Short Quiz">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- Adds HTML5 element support for earlier versions of IE -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link href="css/main.css" rel="stylesheet" media="screen">
+</head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <h1 id="quizTitle">A Short Quiz</h1>               
+            </nav>
+                <h2 id="question"></h2>                
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="radio" id="answerOption1" name="answerOption">
+                                <label id="answerOption1Label"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" id="answerOption2" name="answerOption">
+                                <label id="answerOption2Label"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" id="answerOption3" name="answerOption">
+                                <label id="answerOption3Label"></label>                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="currentScore">
+                                Current Score: 0 out of 10                  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" id="nextButton" class="btn btn-danger" onclick="checkAnswer()">Submit Answer</button>                             
+                            </td>
+                        </tr>                                                 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="feedbackModalLabel">Result</span>
+                </div>
+                <div class="modal-body">
+                    <span id="answerStatus"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="js/quizData.js"></script>
+        <script src="js/main.js"></script>     
+    </body>
+</html>
