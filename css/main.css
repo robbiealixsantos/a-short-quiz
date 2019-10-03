@@ -35,12 +35,6 @@ body {
     border: 1px !important;
     font-size: 17px;
 }
-
-.custom-control-input:checked ~ .custom-control-label::before {
-    color: #fff;
-    border-color: #7B1FA2;
-    background-color: #7B1FA2;
-}
   
 #currentScore {
     text-align: center;
